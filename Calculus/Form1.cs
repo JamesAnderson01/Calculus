@@ -73,3 +73,13 @@ namespace Calculus
 
     }
 }
+void derivative()
+{
+    for (int i = 1; i < table.Count; i++)
+    {
+        double dV = table[i].voltage - table[i - 1].voltage;
+        double dt = table[i].tome - table[i - 1].time;
+        table[i].voltageDerivative = dV / dt;
+    }
+}
+
